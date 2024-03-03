@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assingment-Project-3</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+       
+
+        nav {
+            display: flex;
+            height: 70px;
+            width: 100%;
+            align-items: center;
+            justify-content: space-around;
+        }
+        ul{
+            display: flex;
+            margin-left: 400px;
+        }
+        li {
+            padding-right: 15px;
+            display: inline-block;
+        }
+        .section {
+            display: flex;
+            justify-content: space-between;
+        }
+        .word {
+            /* width:33.3% ;
+            height: 33.3%; */
+            height: auto;
+            margin-left: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-direction: column;
+
+        }
+        .word h1 {
+            font-size: 3rem;
+            margin-top: 120px;
+        }
+        .word h5 {
+          color: darkgray;
+          font-size: 1.5rem;
+          display: flex;
+          padding-right: 30px;
+          margin-bottom: -10px;
+        }
+        .word h5 p {
+            color: rgb(219, 219, 1);
+            font-weight: lighter;
+            font-size: 1.5rem;
+            padding-left: 10px;
+            /* margin-bottom: -400px; */
+        }
+        .word h6 {
+            color: rgb(151, 151, 151);
+            display: flex;
+            font-size: 1.5rem;
+            font-weight: 100;
+            padding-left: 20px;
+            /* margin-bottom: -800px; */
+            margin-bottom: 40px;
+        }
+        .word h6 p {
+           color: black;
+           padding-left: 5px;
+           font-weight: 600;
+           
+        }
+        .center {
+          /* width:33.3%;
+          height: 33.3%; */
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          /* position: relative; */
+        }
+        .circle {
+            margin-top: 70px;
+            width: 480px;
+            height: 480px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative; 
+            border-radius: 50%;
+            background-color: rgb(168, 168, 168);
+        }
+        .circle img {
+            width: 750px;
+            height: 600px;
+            position: absolute; 
+            /* border-radius: 50%;
+            display: flex;
+             align-items: center; 
+            justify-content: center;  */
+            right: -100px;
+            bottom: -30px;
+           
+        }
+        .small {
+           height: 65px;
+           width: 250px;
+           background-color: rgb(255, 255, 255);
+           display: flex;
+           /* align-items: center; */
+           flex-direction: column;
+           padding-left: 70px;
+           padding-top: 10px;
+
+
+        }
+        .ope {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: white;
+            position: absolute;
+            top: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            transform: rotate(-30deg);
+
+        }
+        .ope h6 {
+            color: rgb(223, 187, 68);
+            font-size: 20px;
+        }
+        .ope p {
+            padding-left: 20px;
+            font-weight: bold;
+        }
+        .circle1 {
+            position: absolute;
+            border-radius: 30px;
+            top: 190px;
+            right: -130px; 
+            
+        }
+        .circle1 p {
+            color: darkgray;
+            font-size: medium;
+        }
+        .circle2 p {
+         font-size: medium;
+            color: darkgray;
+        }
+        .circle2 {
+            position: absolute;
+            border-radius: 30px;
+            bottom: 30px;
+            left: -110px;
+           
+        }
+        .end {
+             /* width:33.3%; 
+          height: 33.3%;  */
+          margin-left: 40px;
+          display: flex;
+          flex-direction: column;
+        }
+        .chevron {
+            height: 50px;
+            width: 150px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+           /* background-color: aliceblue; */
+           /* border-radius: 10px; */
+           position: relative;
+           margin-right: 15px;
+           margin-top: 15px;
+           }
+           .chevron p {
+            margin-bottom: 30px;
+            margin-right: 30px;
+            font-weight: bold;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            
+        }
+         .chevron h4 {
+            font-size: 1.2rem;
+            margin-top: -10px;
+         }
+        .icon1 {
+            display: flex;
+            position: absolute;
+            left: 10px;
+            bottom: 1px;
+            
+        }
+        .icon2 {
+            display: flex;
+            position: absolute;
+            right: 10px;
+            bottom: 1px;
+        }
+       
+       .product {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        position: relative;
+       }
+       .fa-message {
+        position: absolute;
+        bottom: 25px;
+        left: 30px;
+       }
+        .new {
+            position: absolute;
+            color: white;
+            font-size: 9px;
+            /* align-items: center; */
+            bottom: 25px;
+            left: 33px; 
+        }
+        .point {
+            width: 150px;
+            height: 40px;
+            background-color: black;
+            color: white;
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 50px;
+        }
+        .bag{
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: yellow;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 5px;
+            margin-right: 20px;
+        }
+        .pic1 {
+            height: 668px; 
+            width: 584px;
+            display: flex;
+        }
+        .pic2 {
+            height: 688px; 
+            width: 584px;
+            display: flex;
+        }
+        .pic3 {
+            height: 688px; 
+            width: 584px;
+            display: flex;
+        }
+
+        /* .slen {
+          height: 650px;
+          width: 250px;
+         display: flex;
+        } */
+        .cart {
+            background-color: blue;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+        .ife {
+            width: 80px;
+            justify-content: space-around;
+            align-items: center;
+            display: flex;
+        }
+    .notes {
+        position: absolute;
+    }
+    .notes {
+        position: relative;
+        left: -50px;
+        bottom: 30px;
+    }
+    .notes2 {
+        position: relative;
+        left: -50px;
+        bottom: 30px;
+    }
+   .ofe {
+    display: flex;
+    margin-top: -50px;
+    font-family:  sans-serif;
+   }
+   .resp {
+         width: 30px;
+         height: 30px;
+         /* background-color: aqua; */
+         display: none;
+         transition: all 1s ease-in-out;
+         
+
+        }
+   @media only screen and (max-width: 600px) {
+    body {
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+    
+    nav {
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    ul {
+                width: 100%;
+                display: block;
+                /* text-align: center; */
+                align-items: center;
+                position: absolute;
+                top: 50px;
+                left: 0;
+                z-index: -5;
+                margin-top: -300px;
+                transition: all  1s ease-in-out;
+                margin-left: 0;
+                background-color: rgb(35, 119, 188);
+                /* margin-top: 20px; */
+    }
+    li {
+                width: 100%;
+                height: 40px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                
+            }
+            li:hover {
+                background-color: #2e3c38;
+                color: white;
+                
+            }
+      
+       ul .ife {
+           margin-left: 200px;
+       }
+    
+    .section {
+        flex-direction: column;
+        align-items: center;
+        /* margin-bottom: 300px; */
+    }
+    
+    .word {
+        margin-left: 0;
+        margin-top: -50px;
+        text-align: center;
+    }
+    .small {
+        width: 50px;
+        height: 40px;
+    }
+    .circle {
+        width: 200px;
+        height: 200px;
+        margin-top: 20px;
+    }
+   .ope {
+    top: 70px;
+    height: 55px;
+    width: 55px;
+    /* bottom: -60px; */
+    
+   }
+   .ope p {
+            padding-left: 8px;
+            font-weight: bold;
+            font-size: smaller;
+        }
+        .ope h6{
+            font-size: small;
+        }
+    .circle img {
+        width: 300px;
+        height: 250px;
+        right: -40px;
+        bottom: -28px;
+    }
+
+     .circle1, .circle2 {
+        width: 150px;
+        padding-left: 50px;
+    }
+    .circle1 {
+        top: 10px;
+        padding-top: -30px;
+        
+    }
+    .circle1 h4 {
+     font-size: small;
+     
+    } 
+    .circle1 p {
+            font-size: small;
+              margin-top: -15px;
+              margin-left: -10px;
+            /* padding-bottom: 55px; */
+           
+        }
+        .circle2 p {
+            margin-top: -15px;
+            font-size: small;
+            margin-left: 8px;
+        }
+        .circle2 h4 {
+         font-size: small;
+         margin-left: 15px;
+        }
+    .notes {
+    
+     left: -40px;
+     top: -25px;
+    }
+    .notes2 {
+        top: -25px;
+        left: -20px;
+    }
+    .end {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: row;
+
+        margin-left: 50px;
+        margin-top: 20px;
+    }
+    .pic1 {
+        height: 200px;
+        width: 150px;
+    }
+    .pic2 {
+        height: 200px;
+        width: 150px;
+    }
+    .pic3 {
+        height: 200px;
+        width: 150px;
+    }
+     .new {
+        left: 32px;
+     }
+    /* .slen {
+        width: 200px;
+        height: auto;
+    } */
+
+    .chevron {
+        margin-top: -20px;
+    }
+   .word h5 {
+    margin-top: 10px;
+   }
+   .word h6 {
+    margin-top: 10px;
+   }
+   .point {
+    margin-top: 30px;
+   }
+   .ofe {
+    margin-bottom: -1200px;
+   }
+   .resp {
+                display: inline-block;
+                margin-top: 22px;
+                margin-bottom: 110px;
+                /* background-color: aqua; */
+            }
+            .circ {
+                display: none;
+                margin-left: 400px;
+                /* margin-bottom: 100px; */
+            }
+            .rect {
+                position: relative;
+                display: flex;
+                align-items: center;
+                margin-right: 400px;
+                /* padding-top: 100px; */
+                /* margin-bottom: 100px; */
+            
+                /* justify-content: center; */
+            }
+            .fa-align-justify {
+                position: absolute;
+                align-items: center;
+        }
+        /* ul .product {
+            margin-left: 200px;
+            margin-right: 150px;
+            
+        } 
+        ul .fa-message {
+        top: -1px;
+        left: 25px;
+        } */
+
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>HOME</li>
+                <div class="product">
+                    <i class="fa-solid fa-message fa-lg" style="color:red"></i>
+                    <p class="new">new</p>
+                    <li>PRODUCT</li>  
+                </div>
+                <li>ABOUT</li>
+                <li>SUPPORT</li>
+                <div class="ife">
+                    <div class="glass">  <i class="fa-solid fa-magnifying-glass "></i></div>
+                     <div class="cart"> <i class="fa-solid fa-cart-shopping fa-sm" style="color:white"></i></div>
+                      </div>
+            </ul>
+            <div class="rect resp"><h1><i class="fa-solid fa-align-justify fa-2xl"></i></h1></div>
+            <div class="circ resp"><h1><i class="fa-solid fa-remove fa-2xl"></i></h1></div>
+            <!-- <div class="ife">
+          <div class="glass">  <i class="fa-solid fa-magnifying-glass fa-xs"></i></div>
+           <div class="cart"> <i class="fa-solid fa-cart-shopping fa-xs" style="color:white"></i></div>
+            </div> -->
+        </nav>
+    </header>
+    <div class="section">
+        <div class="word">
+            <h1>Always <br>
+            Be Your <br>
+            Self</h1>
+            <h5>Energy<p>Drink</p></h5>
+            <h6>Total order : <p>$12.00</p></h6> 
+            <div class="chevron">
+             <p>Choose your</p>
+               <div class="icon1"> <i class="fa-solid fa-chevron-circle-down fa-xl"></i> </div>
+                <h4>2</h4>
+                <div class="icon2"><i class="fa-solid fa-chevron-circle-up fa-xl"></i> </div>
+            </div>
+            <div class="point">
+                <div class="bag">
+                    <i class="fa-solid fa-bag-shopping" style="color: black;"></i>
+                </div>
+                <p>
+                    Buy Now
+                </p>
+            </div>
+        </div>
+        <div class="center">
+          <div class="circle">
+            <img src="IMG-20240226-WA0000-removebg-preview.png" alt="Image">
+            <div class="small circle1"></i><h4>Classic Drinks</h4> <br>
+            <p>For traditionalist who like</p>
+            <div class="notes">
+                <i class="fa-solid fa-sticky-note fa-2xl" style="color:skyblue"></i>
+              </div>
+        </div>
+            <div class="ope"><h6>100%</h6><p>Original product</p></div>
+            <div class="small circle2"></i><h4>Best Drinks</h4> <br>
+            <p>The things you can order</p>
+            <div class="notes2">
+                <i class="fa-solid fa-sticky-note fa-2xl" style="color: palevioletred;"></i>
+              </div>
+        </div>
+          </div>
+        </div>
+        <div class="end">
+            <img class="pic1" src="IMG-20240227-WA0002.jpg" alt="pic1">
+            <img class="pic2" src="IMG-20240227-WA0003.jpg" alt="pic2">
+            <img class="pic3" src="IMG-20240227-WA0004.jpg" alt="">
+            <!-- <img  class="slen"  src="IMG-20240227-WA0001.jpg" alt="picture"> -->
+        </div>
+        <div class="ofe"><h5>Giveaway free Sample</h5> <i class="fa-solid fa-long-arrow-right"></i></div>
+    </div>
+    <script>
+        const ulEl = document.querySelector("ul") 
+    const dropBtn = document.querySelector(".rect")  
+    const closeBtn = document.querySelector(".circ")
+     dropBtn.addEventListener('click', function (){
+   ulEl.style.marginTop = "0"
+   dropBtn.style.display = 'none'
+   closeBtn.style.display = 'block'
+
+     })  
+     closeBtn.addEventListener('click', function (){
+        ulEl.style.marginTop = "-250px"
+   dropBtn.style.display = 'block'
+   closeBtn.style.display = 'none'
+
+
+     }) 
+</script>
+</body>
+</html>
